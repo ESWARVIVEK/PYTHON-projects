@@ -1,0 +1,23 @@
+import random
+import string
+def generate_password(length):
+    if length < 4:
+        return "Password length should be at least 4 characters."
+    letters = string.ascii_letters   # a-z + A-Z
+    digits = string.digits           # 0-9
+    special_chars = string.punctuation  # Special characters like @#$%^&*
+    password = [
+        random.choice(letters),
+        random.choice(digits),
+        random.choice(special_chars)
+    ]
+    all_chars = letters + digits + special_chars
+    password += random.choices(all_chars,k=length-3)
+    print(password)
+    random.shuffle(password)
+    return ''.join(password)
+try:
+    length = int(input("Enter desired password length: "))
+    print("Generated Password:", generate_password(length))
+except ValueError:
+    print("Invalid input! Please enter a number.")
