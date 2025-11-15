@@ -1,4 +1,5 @@
 This contain three mini python projects.
+
 1.Number Guessing Game (Python)
 A fun and interactive Python game where the computer thinks of a number between 1 and 100, and the player must guess it.
 This is a great beginner project to understand loops, user input, random number generation, and error handling.
